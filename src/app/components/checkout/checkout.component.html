@@ -1,0 +1,62 @@
+<div class="checkoutForm">
+    <h2> Total Order Amount in your Cart : {{totalOrder}}</h2>
+<form [formGroup]="form">
+     <label for="firstName">First Name</label>
+    <input formControlName="firstName" id="firstName" name="firstName" type="text">
+
+    <label for="lastName">Last Name</label>
+    <input formControlName="lastName" id="lastName" name="lastName" type="text">
+
+    <label for="address">Address</label>
+    <input formControlName="address" id="address" name="address" type="text">
+
+    <label for="city">City</label>
+    <input formControlName="city" id="city" name="city" type="text">
+
+    <label for="postalCode">Postal Code</label>
+    <input formControlName="postalCode" id="postalCode" name="postalCode" type="text">
+    
+    <label for="country">Country</label>
+    <select formControlName="country" id="country" name="country">
+        <option value="">Select Country</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+    </select>
+
+    
+    
+    <label for="cardType">Card Type</label>
+    <select formControlName="cardType" id="cardType" name="cardType">
+        <option value="">Select Type</option>
+        <option value="VISA">VISA</option>
+        <option value="Master">Master</option>
+    </select>
+
+    <label for="nameOnCard">Name On Card</label>
+    <input formControlName="nameOnCard" id="nameOnCard" name="nameOnCard" type="text">
+
+    <label for="ccNumber">Credit Card Number</label>
+    <input formControlName="ccNumber" id="ccNumber" name="ccNumber" 
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type="number" maxlength="16"> 
+
+    <label >Credit Card Expire</label>
+    <div class="expiry-box">
+        <input type="text" formControlName="ccExpireMonth" id="ccExpireMonth" name="ccExpireMonth" 
+            size="2" class="mini_input" maxlength="2" />
+        <div class="slash">/</div>
+        <input type="text" formControlName="ccExpireYear" id="ccExpireYear" name="ccExpireYear" 
+            size="2" class="mini_input mini_input-year" maxlength="4" />
+    </div>
+    
+
+
+    <label for="cvc">CVC</label>
+    <input formControlName="cvc" id="cvc" name="cvc"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type="number" maxlength="4">
+
+    <button (click)="submit()" [disabled]="!form.valid">Checkout</button>
+    <!-- {{form.valid}} -->
+</form>
+</div>

@@ -1,0 +1,18 @@
+
+label, button {
+    display: block;
+}
+
+input, button, select{
+    margin-bottom: 20px;
+}
+.checkoutForm{
+    margin-left: 20%;
+    margin-top: 2%;
+    padding-bottom: 40px;
+}
+
+.expiry-box{display:block; border:1px solid #999; width:60px;}
+.expiry-box *{display:inline-block; color:#555; vertical-align:middle}
+.mini_input{width:15px; font-size:10px; border:none; background:none; box-shadow:none; padding: 3px 0 5px 5px; margin-bottom: 0px}
+.mini_input-year{width: 25px;}
